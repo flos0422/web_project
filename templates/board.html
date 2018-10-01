@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Board Page</title>
+  </head>
+  <body>
+    <table border='1'>
+      <tr>
+        <th>번호</th>
+        <th width='500'>제목</th>
+        <th>작성자</th>
+        <th>작성일</th>
+      </tr>
+      {% for i in data %}
+      <tr>
+        <th>{{ i[0] }}</th>
+        <th width='500'><a href='/board/{{ i[0] }}'>{{ i[1] }}</a></th>
+        <th>{{ i[2] }}</th>
+        <th>{{ i[4] }}</th>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href='/'><input type='button' value='Home'></a>
+    <a href='/board_write'><input type='button' value='게시글작성'></a>
+  </body>
+</html>
+

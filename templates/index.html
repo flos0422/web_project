@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Welcome!!</title>
+  </head>
+  <body>
+    {% if data != None %}
+    <p>반갑습니다. {{ data }} 님</p>
+    <a href='/board'><input type='button' value='게시판'></a><br>
+    <a href='/user_edit'><input type='button' value='정보수정'></a><br>
+    <a href='/logout'><input type='button' value='로그아웃'></a><br>
+    {% else %}
+    <p>반갑습니다.</p>
+    <a href='/login'><input type='button' value='로그인'></a><br>
+    <a href='/register'><input type='button' value='회원가입'></a><br>
+    {% endif %}
+  </body>
+</html>
+

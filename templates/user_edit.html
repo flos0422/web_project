@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>User Edit Page</title>
+  </head>
+  <body>
+    아이디<br>
+    {{ data[0][1] }}<br>
+    <form action='' method='POST'>
+      패스워드<br>
+      <input type='password' name='PW' size='40'><br>
+      닉네임<br>
+      <input type='text' value='{{ data[0][2] }}' name='NICK' size='40'><br>
+      이메일<br>
+      <input type='text' value='{{ data[0][4] }}' name='Email' size='40'><br>
+      전화번호<br>
+      <input type='number' value='{{ data[0][5] }}' name='num' size='40'><br>
+      <br>
+      <input type='submit' value='수정'><a href='/'><input type='button' value='취소'></a>
+    </form>
+  </body>
+</html>
+

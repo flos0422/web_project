@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Comment 수정</title>
+  </head>
+  <body>
+    <p>Comments</p>
+    <form action='' method='POST'>
+      <input type='text' value='{{ data[0][3] }}' name='c_main' size='105'>
+      <input type='submit' value='수정'>
+      <a href='/board/{{ data[0][1] }}'><input type='button' value='취소'></a><br>
+    </form>
+    <table class='table'>
+      {% for i in com %}
+      <tr>
+        <th>{{ i[2] }}</th>
+        <td width='500'>- {{ i[3] }}</td>
+        <th>{{ i[4] }}</th>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

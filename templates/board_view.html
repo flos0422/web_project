@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>{{ data[0][2] }}님의 게시글</title>
+  </head>
+  <body>
+    {% if ID == data[0][5] %}
+    <h1>{{ data[0][1] }}</h1>
+    <p>{{ data[0][3] }}</p>
+    <br>
+    <a href='{{ data[0][6] }}'>{{ data[0][6].rsplit('/')[-1]  }}</a><br>
+    <br>
+    <a href='/board'><input type='button' value='목록'></a>
+    <a href='/board_edit/{{ data[0][0] }}'><input type='button' value='수정'></a>
+    <a href='/board_del/{{ data[0][0] }}'><input type='button' value='삭제'></a>
+    <br>
+    <br>
+    <form action='' method='POST'>
+      <p>Comments</p>
+      <input type='text' name='c_main' size='105'>
+      <input type='submit' value='작성'><br>
+    </form>
+    <table class='table'>
+    {% for i in com %}
+    <tr>
+      <th>{{ i[2] }}</th>
+      <td width='500'>- {{ i[3] }}</td>
+      <th>{{ i[4] }}</th>
+      <td><a href='/comments_edit/{{ i[0] }}'><input type='button' value='수정'></a></td>
+      <td><a href='/comments_del/{{ i[0] }}'><input type='button' value='삭제'></a></td>
+    </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+    <h1>{{ data[0][1] }}</h1>
+    <p> {{ data[0][3] }}</p>
+    <br>
+    <a href='{{ data[0][6] }}'>{{ data[0][6].rsplit('/')[-1] }}</a><br>
+    <br>
+    <a href='/board'><input type='button' value='목록'></a>
+    <br>
+    <br>
+    <form action='' method='POST'>
+      <p>Comments</p>
+      <input type='text' name='c_main' size='105'>
+      <input type='submit' value='작성'><br>
+    </form>
+    <table class='table'>
+    {% for i in com %}
+    <tr>
+      <th>{{ i[2] }}</th>
+      <td width='500'>- {{ i[3] }}</td>
+      <th>{{ i[4] }}</th>
+      <td><a href='/comments_edit/{{ i[0] }}'><input type='button' value='수정'></a></td>
+      <td><a href='/comments_del/{{ i[0] }}'><input type='button' value='삭제'></a></td>
+    </tr>
+    {% endfor %}
+    </table>
+    {% endif %}
+  </body>
+</html>

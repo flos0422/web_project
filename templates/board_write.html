@@ -1,0 +1,20 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <form action='' method='POST', enctype="multipart/form-data">
+      제목<br>
+      <input type='text' name='b_title' size='53'><br>
+      작성자<br>
+      <input type='text' value={{ data }} name='b_writer' size='53'><br>
+      내용<br>
+      <textarea rows=30 cols=51 name='b_main'></textarea><br>
+      첨부파일<br>
+      <input type='file' name='b_file'><br>
+      <br>
+      <input type='submit' value='작성'>
+      <a href='/board'><input type='button' value='취소'></a>
+    </form>
+  </body>
+</html>
+

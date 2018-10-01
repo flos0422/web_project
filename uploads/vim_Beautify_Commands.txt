@@ -1,0 +1,3 @@
+apt-get install git exuberant-ctags ncurses-term curl vim
+
+curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=javascript&langs=python&langs=html&editor=vim' > ~/.vimrc
